@@ -23,6 +23,8 @@ services:
             - 80:80
         expose:
             - 80
+        volumes:
+            - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
         networks:
             public_net:
                 ipv4_address: ${HA_PROXY_IP}
